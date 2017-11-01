@@ -33,11 +33,11 @@
         color #e05555
     &__text
       text-align center
-      font-size 10px
+      font-size 12px
       line-height 1em
     &__icon
       width 30px
       height 30px
       background-color #ddd
-      margin 10px auto 5px auto
+      margin 8px auto 5px auto
 </style>
