@@ -2,14 +2,19 @@
   #app
     router-view
     br
-    div
-      router-link(to="/") Главная 
-      router-link(to="/cart") Корзина 
+    menu-bar
 </template>
 
 <script>
+  import menuBar from '@/components/menu/menu'
+
+  //console.log(menu)
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      menuBar
+    }
   }
 </script>
 
