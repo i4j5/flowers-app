@@ -1,6 +1,6 @@
 <template lang="pug">
   .menu
-    router-link(to="/" tag="div" class="menu__item")
+    router-link(to="/" tag="div" class="menu__item menu__item_page_main")
       .menu__icon
       .menu__text Букет дня 
     router-link(to="/categories" tag="div" class="menu__item")
@@ -31,6 +31,10 @@
       border none
       &_active
         color #e05555
+      &_exact-active
+        color #e05555 !important
+      &_page_main
+        color #000
     &__text
       text-align center
       font-size 12px

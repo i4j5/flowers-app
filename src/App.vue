@@ -21,6 +21,11 @@
 </script>
 
 <style lang="stylus">
+  body
+    background-color #e8e8e8
+    width 100%
+    padding 0
+    margin 0
   #app
     font-family Arial, sans-serif
   .page
@@ -43,4 +48,6 @@
     display block
     height 60px
     box-shadow 0 -1px 4px #ddd
+  .content
+    padding-top 5px
 </style>

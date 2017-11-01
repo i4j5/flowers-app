@@ -33,8 +33,8 @@ const scrollBehavior = (to, from, savedPosition) => {
 export default new Router({
 	mode: 'history',
 	base: '/',
-  //linkActiveClass: 'menu__item_active',
-  linkExactActiveClass: 'menu__item_active',
+  linkActiveClass: 'menu__item_active',
+  linkExactActiveClass: 'menu__item_exact-active',
 	scrollBehavior,
   routes: [
     { path: '/', component: main },
