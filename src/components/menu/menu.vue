@@ -23,11 +23,12 @@
 <style lang="stylus">
   .menu
     width 100%
+    height 100%
     &__item
       width 25%
       float left
       color #000
-      text-deactivated none
+      height 100%
       border none
       &_active
         color #e05555

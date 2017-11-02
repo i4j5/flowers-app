@@ -12,6 +12,7 @@ const express = require('express')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = require('./webpack.dev.conf')
+const fs = require('fs')
 
 // default port where dev server listens for incoming traffic
 const port = process.env.PORT || config.dev.port
@@ -23,6 +24,21 @@ const proxyTable = config.dev.proxyTable
 
 const app = express()
 const compiler = webpack(webpackConfig)
+
+// My API
+app.get('/api/*', (req, res) => {
+  let json = fs.readFileSync('src/api.json', 'utf8');
+  let data = JSON.parse(json)
+
+  let arr = req.params[0].split('/')
+
+  arr.forEach(function(el) {
+    if (el != '') 
+      data = (data[el] != undefined) ? data[el] : {} 
+  })
+
+  res.send(data)
+})
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,

@@ -10,8 +10,6 @@
 <script>
   import menuBar from '@/components/menu/menu'
 
-  //console.log(menu)
-
   export default {
     name: 'app',
     components: {
@@ -21,6 +19,8 @@
 </script>
 
 <style lang="stylus">
+  *
+    box-sizing border-box
   body
     background-color #e8e8e8
     width 100%
