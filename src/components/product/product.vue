@@ -3,6 +3,7 @@
     .product__title {{ folder.title }}
     .product__price {{ folder.price }}
     .product__id {{ folder.id }}
+    .btn(v-on:click="addCart") Добавить
 </template>
 
 <script>
@@ -18,7 +19,13 @@
       }
     },
     methods: {
-
+      addCart() {
+        console.log(this.$props.folder.id)
+        this.$store.dispatch("cart", {
+          action: "add",
+          id: this.$props.folder.id
+        })
+      }
     }
   }
 </script>
