@@ -8,24 +8,9 @@
   import product from "@/components/product/product"
 
   export default {
-    data: () => {
-      return {
-        items: [
-          {
-            id: 1,
-            title: "Цветы"
-          },
-          {
-            id: 2,
-            title: "Цветы 1",
-            price: 4000
-          },
-          {
-            id: 3,
-            title: "Цветы 2",
-            price: 1595
-          }
-        ]
+    computed: {
+      items () {
+        return this.$store.state.day
       }
     },
     name: "main",

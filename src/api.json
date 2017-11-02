@@ -1,3 +1,144 @@
 {
-	"catalog": []
+	"catalog": {
+		"1": {
+			"id": "1",
+			"title": "Розы",
+			"image": {
+				"src": "http://via.placeholder.com/500x250"
+			},
+			"items": {
+				"1": {
+					"id": "1",
+					"title": "Бордо",
+					"discription": "String",
+					"price": "4900",
+					"images": [
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						}
+					]
+				},
+				"2": {
+					"id": "2",
+					"title": "Белые розы",
+					"discription": "String",
+					"price": "3000",
+					"images": [
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						}
+					]
+				}
+			}
+		},
+		"2": {
+			"id": "2",
+			"title": "Розы",
+			"image": {
+				"src": "http://via.placeholder.com/500x250"
+			},
+			"items": {
+				"3": {
+					"id": "3",
+					"title": "Бордо",
+					"discription": "String",
+					"price": "4900",
+					"images": [
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						}
+					]
+				},
+				"4": {
+					"id": "4",
+					"title": "Белые розы",
+					"discription": "String",
+					"price": "3000",
+					"images": [
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						},
+						{
+							"title": "String",
+							"src": "http://via.placeholder.com/1080x1080"
+						}
+					]
+				}
+			}
+		}
+	},
+	"day":[
+		 {
+			"id": "3",
+			"title": "Бордо",
+			"discription": "String",
+			"price": "4900",
+			"images": [
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				},
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				},
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				}
+			]
+		},
+		{
+			"id": "4",
+			"title": "Белые розы",
+			"discription": "String",
+			"price": "3000",
+			"images": [
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				},
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				},
+				{
+					"title": "String",
+					"src": "http://via.placeholder.com/1080x1080"
+				}
+			]
+		}
+	]
 }
