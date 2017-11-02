@@ -31,6 +31,8 @@
 <style lang="stylus">
   *
     box-sizing border-box
+    padding 0
+    margin 0
   body
     background-color #e8e8e8
     width 100%
