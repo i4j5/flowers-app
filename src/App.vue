@@ -53,6 +53,7 @@
     display none 
     &_active
       display block
+
   .spinner
     width 40px
     height 40px
@@ -80,6 +81,7 @@
     display block
     height 40px
     box-shadow 0 1px 4px #ddd
+    z-index 100
   .footer
     background-color #fff	
     position fixed
@@ -89,6 +91,7 @@
     display block
     height 60px
     box-shadow 0 -1px 4px #ddd
+    z-index 100
   .content
     padding-top 5px
 </style>

@@ -11,46 +11,47 @@ export default new Vuex.Store({
     catalog: {},
     day: [],
     loading: true,
-    cart: {}
+    cart: []
   },
   getters: {},
   mutations: {
     set(state, { type, items }) {
       state[type] = items
     },
-    addCart(state, {id, count}) {
-      let item = state.cart[id]
-      if (item != undefined) {
-        item.count =  item.count + count
+    addCart(state, {id, quantity}) {
+      const record = state.cart.find(p => p.id === id)
+
+      if (!record) {
+        state.cart.push({
+          id,
+          quantity: 1
+        })
       } else {
-        state.cart[id] = {
-          count
-        }
+        record.quantity = record.quantity + quantity
       }
     },
-    removeCart(state, {id, count}) {
-      let item = state.cart[id]
-      if (item != undefined) {
-        if (item.count <= 1 ||  item.count < cout) {
-          delete state.cart[id]
+    removeCart(state, {id, quantity}) {
+      const record = state.cart.find(p => p.id === id)
+      if (record) {
+        if (record.quantity === 1 || record.quantity <= quantity) {
+          state.cart.splice(state.cart.indexOf(record), 1)
         } else {
-          item.count =  item.count - count        
+          record.quantity = record.quantity - quantity  
         }
       }
     }
   },
   actions: {
     cart({ commit }, data) {
-      
-      let id = data.id || 0
       let action = data.action || "add"
-      let count = data.count || 1
+      let quantity = data.quantity || 1
+      let id = data.id || 0
 
       if (action === 'add') {
-        commit('addCart', { id, count })
+        commit('addCart', { id, quantity })
       }
       if (action === 'remove') {
-        commit('removeCart', { id, count })        
+        commit('removeCart', { id, quantity })        
       }
     },
     getCatalog({ commit }) {

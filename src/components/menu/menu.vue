@@ -7,7 +7,7 @@
       .menu__icon
       .menu__text Каталог
     router-link(to="/cart" tag="div" class="menu__item")
-      .menu__icon
+      .menu__icon {{ quantity }}
       .menu__text Корзина
     .menu__item
       .menu__icon
@@ -16,7 +16,12 @@
 
 <script>
   export default {
-    name: 'menu'
+    name: 'menu',
+    computed: {
+      quantity () {
+        return this.$store.state.cart.length
+      }
+    },
   }
 </script>
 

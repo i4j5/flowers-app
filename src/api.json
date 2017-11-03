@@ -100,7 +100,7 @@
 		}
 	},
 	"day":[
-		 {
+		{
 			"id": "3",
 			"title": "Бордо",
 			"discription": "String",
@@ -108,15 +108,47 @@
 			"images": [
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/arch"
 				},
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/animals"
 				},
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/any"
+				}
+			]
+		},
+		{
+			"id": "7",
+			"title": "Бордо",
+			"discription": "String",
+			"price": "4900",
+			"images": [
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/animals"
+				},
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/arch"
+				},
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/any"
+				},
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/sepia"
+				},
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/people"
+				},
+				{
+					"title": "String",
+					"src": "http://placeimg.com/1000/1000/any"
 				}
 			]
 		},
@@ -128,15 +160,15 @@
 			"images": [
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/any"
 				},
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/arch"
 				},
 				{
 					"title": "String",
-					"src": "http://via.placeholder.com/1080x1080"
+					"src": "http://placeimg.com/1000/1000/animals"
 				}
 			]
 		}
