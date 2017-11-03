@@ -8,8 +8,10 @@ const apiUrl = '/api/'
 
 export default new Vuex.Store({
   state: {
-    catalog: {},
-    day: [],
+    catalog: {
+      categories: [],
+      products: []
+    },
     loading: true,
     cart: []
   },
@@ -19,7 +21,7 @@ export default new Vuex.Store({
       state[type] = items
     },
     addCart(state, {id, quantity}) {
-      const record = state.cart.find(p => p.id === id)
+      const record = state.cart.find( p => p.id === id )
 
       if (!record) {
         state.cart.push({
@@ -57,13 +59,7 @@ export default new Vuex.Store({
     getCatalog({ commit }) {
       axios.get(apiUrl)
       .then( response => {
-        let data = response.data
-
-        const catalog = data.catalog
-        const day = data.day
-
-        commit('set', { type: 'catalog', items: catalog })
-        commit('set', { type: 'day', items: day })
+        commit('set', { type: 'catalog', items: response.data.catalog })
         setTimeout(()=>{
           commit('set', { type: 'loading', items: false })
         }, 500)

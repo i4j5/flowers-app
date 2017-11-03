@@ -1,176 +1,97 @@
 {
 	"catalog": {
-		"1": {
-			"id": "1",
-			"title": "Розы",
-			"image": {
-				"src": "http://via.placeholder.com/500x250"
+		"categiries": [
+			{
+				"id": "1",
+				"title": "Розы",
+				"image": {
+					"src": "http://placeimg.com/1000/500/nature"
+				}
 			},
-			"items": {
-				"1": {
-					"id": "1",
-					"title": "Бордо",
-					"discription": "String",
-					"price": "4900",
-					"images": [
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						}
-					]
-				},
-				"2": {
-					"id": "2",
-					"title": "Белые розы",
-					"discription": "String",
-					"price": "3000",
-					"images": [
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						}
-					]
+			{
+				"id": "2",
+				"title": "Розы",
+				"image": {
+					"src": "http://placeimg.com/1000/500/arch"
+				}
+			},
+			{
+				"id": "3",
+				"title": "Розы",
+				"image": {
+					"src": "http://placeimg.com/1000/500/animals"
 				}
 			}
-		},
-		"2": {
-			"id": "2",
-			"title": "Розы",
-			"image": {
-				"src": "http://via.placeholder.com/500x250"
+		],
+		"products": [
+			{
+				"id": "1",
+				"id_category": "1",
+				"quantity": "0",
+				"title": "Бордо",
+				"discription": "String",
+				"price": "4900",
+				"day": "true",
+				"images": [
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					}
+				]
 			},
-			"items": {
-				"3": {
-					"id": "3",
-					"title": "Бордо",
-					"discription": "String",
-					"price": "4900",
-					"images": [
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						}
-					]
-				},
-				"4": {
-					"id": "4",
-					"title": "Белые розы",
-					"discription": "String",
-					"price": "3000",
-					"images": [
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						},
-						{
-							"title": "String",
-							"src": "http://via.placeholder.com/1080x1080"
-						}
-					]
-				}
+			{
+				"id": "2",
+				"id_category": "1",
+				"quantity": "0",
+				"title": "Бордо",
+				"discription": "String",
+				"price": "4900",
+				"day": "true",
+				"images": [
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					}
+				]
+			},
+			{
+				"id": "3",
+				"id_category": "2",
+				"quantity": "0",
+				"title": "Бордо",
+				"discription": "String",
+				"price": "4900",
+				"images": [
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					},
+					{
+						"title": "String",
+						"src": "http://via.placeholder.com/1080x1080"
+					}
+				]
 			}
-		}
-	},
-	"day":[
-		{
-			"id": "3",
-			"title": "Бордо",
-			"discription": "String",
-			"price": "4900",
-			"images": [
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/arch"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/animals"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/any"
-				}
-			]
-		},
-		{
-			"id": "7",
-			"title": "Бордо",
-			"discription": "String",
-			"price": "4900",
-			"images": [
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/animals"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/arch"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/any"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/sepia"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/people"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/any"
-				}
-			]
-		},
-		{
-			"id": "4",
-			"title": "Белые розы",
-			"discription": "String",
-			"price": "3000",
-			"images": [
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/any"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/arch"
-				},
-				{
-					"title": "String",
-					"src": "http://placeimg.com/1000/1000/animals"
-				}
-			]
-		}
-	]
+		]
+	}
 }

@@ -10,7 +10,7 @@
   export default {
     computed: {
       items () {
-        return this.$store.state.day
+        return this.$store.state.catalog.products.filter( priduct => priduct.day === 'true' )
       }
     },
     name: "main",
