@@ -60,9 +60,7 @@ export default new Vuex.Store({
       axios.get(apiUrl)
       .then( response => {
         commit('set', { type: 'catalog', items: response.data.catalog })
-        setTimeout(()=>{
-          commit('set', { type: 'loading', items: false })
-        }, 500)
+        commit('set', { type: 'loading', items: false })
       })
       .catch( error => { throw error });
     }

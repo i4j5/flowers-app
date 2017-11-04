@@ -27,7 +27,6 @@
 			{
 				"id": "1",
 				"id_category": "1",
-				"quantity": "0",
 				"title": "Бордо",
 				"discription": "String",
 				"price": "4900",
@@ -50,7 +49,6 @@
 			{
 				"id": "2",
 				"id_category": "1",
-				"quantity": "0",
 				"title": "Бордо",
 				"discription": "String",
 				"price": "4900",
@@ -73,7 +71,6 @@
 			{
 				"id": "3",
 				"id_category": "2",
-				"quantity": "0",
 				"title": "Бордо",
 				"discription": "String",
 				"price": "4900",
