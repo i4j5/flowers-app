@@ -17,7 +17,7 @@ export default new Vuex.Store({
   },
   getters: {},
   mutations: {
-    set(state, { type, items }) {
+    set(state, {type, items}) {
       state[type] = items
     },
     addCart(state, {id, quantity}) {
@@ -41,6 +41,12 @@ export default new Vuex.Store({
           record.quantity = record.quantity - quantity  
         }
       }
+    },
+    deleteCart(state, {id}) {
+      const record = state.cart.find(p => p.id === id)
+      if (record) {
+        state.cart.splice(state.cart.indexOf(record), 1)
+      }
     }
   },
   actions: {
@@ -54,6 +60,9 @@ export default new Vuex.Store({
       }
       if (action === 'remove') {
         commit('removeCart', { id, quantity })        
+      }
+      if (action === 'delete') {
+        commit('deleteCart', { id })        
       }
     },
     getCatalog({ commit }) {
