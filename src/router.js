@@ -3,9 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import notFound from '@/pages/not-found'
 import main from '@/pages/main'
 import cart from '@/pages/cart'
-import notFound from '@/pages/not-found'
+import categories from '@/pages/categories'
+import category from '@/pages/categories/category'
 
 const scrollBehavior = (to, from, savedPosition) => {
   // SavedPosition is only available for popstate navigations.
@@ -39,6 +41,8 @@ export default new Router({
   routes: [
     { path: '/', component: main },
     { path: '/cart', component: cart },
+    { path: '/categories', component: categories },
+    { path: '/categories/:id', component: category },
     { path: '*', component: notFound }
   ]
 })
