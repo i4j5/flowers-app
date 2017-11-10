@@ -2,7 +2,7 @@
   .product
     slider(:images="folder.images")   
     .product__title {{ folder.title }}
-    .product__price {{ folder.price }}
+    .product__price {{ folder.price }} ₽
     .product__id {{ folder.id }}
     .btn(v-on:click="addCart") Добавить
 </template>
@@ -40,6 +40,9 @@
     width 100%
     background-color #fff
     margin-bottom  10px
+    &__price
+      font-size 18px
+      font-weight 300
     &__image
       max-width 100%
 </style>

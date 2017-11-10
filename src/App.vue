@@ -11,6 +11,7 @@
 
 <script>
   import menuBar from '@/components/menu/menu'
+  import '@/components/fonts/fonts.css'
 
   export default {
     name: 'app',
@@ -39,7 +40,9 @@
     padding 0
     margin 0
   #app
-    font-family Arial, sans-serif
+    font-family 'Roboto', Arial, sans-serif
+    font-weight 400
+    font-style normal
   .page
     padding 40px 0 60px
   .loader
