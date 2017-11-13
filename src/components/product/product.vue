@@ -1,10 +1,14 @@
 <template lang="pug">
   .product
-    slider(:images="folder.images")   
-    .product__title {{ folder.title }}
-    .product__price {{ folder.price }} ₽
-    .product__id {{ folder.id }}
-    .btn(v-on:click="addCart") Добавить
+    slider(:images="folder.images")
+    .product__content
+      .product__col-left
+        .product__title {{ folder.title }}
+        .product__btn.product__btn_tmpl_info Подробнее
+      .product__col-right
+        .product__price {{ folder.price }} ₽
+        br
+        .product__btn.product__btn_tmpl_order(v-on:click="addCart") Заказать
 </template>
 
 <script>
@@ -40,9 +44,49 @@
     width 100%
     background-color #fff
     margin-bottom  10px
+    padding-bottom 10px
+    &__title
+      font-size 16px
+      line-height 25px
+    &__content
+      padding 0 10px
+      &:after
+        content ""
+        display table
+        clear both
+    &__col
+      &-left
+        float left
+        display inline-block
+      &-right
+        display inline-block
+        text-align center
+        float right
     &__price
-      font-size 18px
+      font-size 20px
+      line-height 1.4em
       font-weight 300
+      display inline-block
+      padding 0 14px
     &__image
       max-width 100%
+    &__btn
+      display inline-block
+      border none
+      &_tmpl_info
+        font-size 14px
+        line-height 25px
+        padding 0 14px
+        user-select none
+        white-space nowrap
+        border 1px solid #aaa
+        border-radius 5px
+      &_tmpl_order
+        font-size 16px
+        line-height 1.8em
+        padding 0 1em
+        user-select none
+        white-space nowrap
+        background #ddd
+        border-radius 5px
 </style>
