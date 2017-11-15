@@ -1,8 +1,10 @@
 <template lang="pug">
   div.cart
-    div(v-for="item in items", :key="item.id")
-      div {{ item.title }}
-      .cart__btn.cart__minus(v-on:click="remove(item.id)") -
+    .cart__item(v-for="item in items", :key="item.id")
+      .cart__image
+        img(:src="item.images[0].src")
+      .cart__title {{ item.title }}
+      .cart__btn.cart__minus(v-on:click="remove(item.id)", v-bind:class="{ 'cart__btn_disabled': item.quantity == 1 }") - 
       .cart__count {{ item.quantity }} 
       .cart__btn.cart__plus(v-on:click="add(item.id)") +
       div {{ item.price * item.quantity }} руб.
@@ -35,17 +37,19 @@
           return product
         })
 
-        console.log(items)
-
         return items
       }
     },
     methods: {
       remove(id) {
-        this.$store.dispatch("cart", {
-          action: "remove",
-          id
-        })
+        let item = this.items.find( p => p.id === id )
+        
+        if (item.quantity != 1) {
+          this.$store.dispatch("cart", {
+            action: "remove",
+            id
+          })
+        }
       },
       add(id) {
         this.$store.dispatch("cart", {
@@ -66,11 +70,29 @@
 
 <style lang="stylus">
   .cart
+    &__item
+      white-space nowrap
+      display table
+      width 100%
+      margin-bottom 10px
+      *
+        vertical-align top
+    &__image
+      width 80px
+      display table-cell
+      padding-right 10px
+      img 
+        width 100%
+    &__title
+      display table-cell
+      padding-right 10px
     &__btn
       display inline-block
       width 20px
       text-align center
       background #ddd
+      &_disabled
+        color #adadad
     &__minus
       margin-right 5px
     &__plus
