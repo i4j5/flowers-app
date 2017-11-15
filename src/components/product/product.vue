@@ -2,23 +2,27 @@
   .product
     slider(:images="folder.images")
     .product__content
-      .product__col-left
-        .product__title {{ folder.title }}
-        .product__btn.product__btn_tmpl_info Подробнее
-        .product__description {{ folder.description }}
-      .product__col-right
-        .product__price {{ folder.price }} ₽
-        br
-        .product__btn.product__btn_tmpl_order(v-on:click="addCart") Заказать
+      .product__title {{ folder.title }}
+      .product__price {{ folder.price }} ₽
+      .product__delivery Доставка после 16
+      .product__row
+        .product__col.product__col.product__col_left
+          .product__btn.product__btn_tmpl_order(v-on:click="addCart") Заказать
+        .product__col.product__col.product__col_right
+          modal(:link="infoBtn") 
+            span(v-html="folder.discription")
 </template>
 
 <script>
   import slider from '@/components/slider/slider'
+  import modal from '@/components/modal/modal'
 
   export default {
-    name: 'menu',
+    name: 'product',
     data: () => {
-      return {}
+      return {
+        infoBtn: "<div class='product__btn product__btn_tmpl_info'>О букете</div>"
+      }
     },
     props:{
       folder: {
@@ -27,6 +31,9 @@
       }
     },
     methods: {
+      info() {
+        console.log()
+      },
       addCart() {
         this.$store.dispatch("cart", {
           action: "add",
@@ -35,7 +42,8 @@
       }
     },
     components: {
-      slider
+      slider,
+      modal
     }
   }
 </script>
@@ -46,53 +54,44 @@
     background-color #fff
     margin-bottom  10px
     padding-bottom 10px
+    &__content
+      padding 0 10px
     &__title
       font-size 16px
-      line-height 25px
-    &__content
-      display table-row
-      &:after
-        content ""
-        display table
-        clear both
-    &__col
-      &-left
-        padding 0 5px 0 10px
-        display table-cell
-        width 100%
-        // float left
-        // display inline-block
-      &-right
-        padding 0 10px 0 5px
-        display table-cell
-        // display inline-block
-        // float right
-        text-align center
+      line-height 1.2em
+      margin-bottom 5px
+    &__delivery
+      font-size 12px
+      line-height 1.25em
+      margin 10px 0
     &__price
       font-size 20px
-      line-height 1.4em
+      line-height 1em
       font-weight 300
       display inline-block
-      padding 0 14px
     &__image
       max-width 100%
+    &__row
+      white-space nowrap
+      display table
+      width 100%
+    &__col
+      width 50%  
+      display table-cell
+      &_left
+        padding-right 4px
+      &_right
+        padding-left 4px
     &__btn
-      display inline-block
       border none
+      text-align center
+      font-size 14px
+      line-height 34px
+      border-radius 4px
+      user-select none
+      white-space nowrap
       &_tmpl_info
-        font-size 14px
-        line-height 25px
-        padding 0 14px
-        user-select none
-        white-space nowrap
         border 1px solid #aaa
-        border-radius 5px
       &_tmpl_order
-        font-size 16px
-        line-height 1.8em
-        padding 0 1em
-        user-select none
-        white-space nowrap
         background #ddd
-        border-radius 5px
 </style>
