@@ -5,6 +5,7 @@
       .product__col-left
         .product__title {{ folder.title }}
         .product__btn.product__btn_tmpl_info Подробнее
+        .product__description {{ folder.description }}
       .product__col-right
         .product__price {{ folder.price }} ₽
         br
@@ -49,19 +50,24 @@
       font-size 16px
       line-height 25px
     &__content
-      padding 0 10px
+      display table-row
       &:after
         content ""
         display table
         clear both
     &__col
       &-left
-        float left
-        display inline-block
+        padding 0 5px 0 10px
+        display table-cell
+        width 100%
+        // float left
+        // display inline-block
       &-right
-        display inline-block
+        padding 0 10px 0 5px
+        display table-cell
+        // display inline-block
+        // float right
         text-align center
-        float right
     &__price
       font-size 20px
       line-height 1.4em
