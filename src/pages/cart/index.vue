@@ -13,6 +13,7 @@
     div(v-if="priceTotal > 0")
       hr
       div Итого: {{ priceTotal }} ₽
+    .cart__btn.cart__btn_order Оформить заказ
 </template>
 
 <script>
@@ -75,7 +76,8 @@
       white-space nowrap
       display table
       width 100%
-      margin-bottom 10px
+      background #fff
+      padding 5px 0px
       *
         vertical-align top
     &__image
@@ -105,6 +107,8 @@
       border-radius 4px
       &_disabled
         color #adadad
+      &_order
+        width 100%
       &_decrement
         border-radius 0px
         border-top-left-radius 4px
