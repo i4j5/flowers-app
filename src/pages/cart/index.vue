@@ -1,17 +1,18 @@
 <template lang="pug">
-  div.cart
+  .cart
     .cart__item(v-for="item in items", :key="item.id")
       .cart__image
         img(:src="item.images[0].src")
       .cart__title {{ item.title }}
-      .cart__btn.cart__minus(v-on:click="remove(item.id)", v-bind:class="{ 'cart__btn_disabled': item.quantity == 1 }") - 
+      
+      .cart__price {{ item.price }} ₽
+      .cart__btn.cart__btn_decrement(v-on:click="remove(item.id)", v-bind:class="{ 'cart__btn_disabled': item.quantity == 1 }") - 
       .cart__count {{ item.quantity }} 
-      .cart__btn.cart__plus(v-on:click="add(item.id)") +
-      div {{ item.price * item.quantity }} руб.
-      .cart__btn(v-on:click="removeAll(item.id)") Удалить
+      .cart__btn.cart__btn_increment(v-on:click="add(item.id)") +
+      .cart__btn.cart__btn_delete(v-on:click="removeAll(item.id)") X
     div(v-if="priceTotal > 0")
       hr
-      div Итого: {{ priceTotal }} руб.
+      div Итого: {{ priceTotal }} ₽
 </template>
 
 <script>
@@ -84,20 +85,45 @@
       img 
         width 100%
     &__title
-      display table-cell
       padding-right 10px
-    &__btn
+    &__price
+      font-size 20px
+      line-height 34px
+      font-weight 300
       display inline-block
-      width 20px
+      margin-right 10px
+    &__btn
+      font-weight 300
+      display inline-block
+      width 34px
+      height 34px
       text-align center
-      background #ddd
+      line-height 34px
+      font-size 24px
+      background #ccc
+      color #000
+      border-radius 4px
       &_disabled
         color #adadad
-    &__minus
-      margin-right 5px
-    &__plus
-      margin-left 5px
+      &_decrement
+        border-radius 0px
+        border-top-left-radius 4px
+        border-bottom-left-radius 4px
+      &_increment
+        border-radius 0px
+        border-top-right-radius 4px
+        border-bottom-right-radius 4px
+      &_delete
+        margin-left 5px
     &__count
       display inline-block
+      width 36px
+      height 34px
+      text-align center
+      line-height 34px
+      font-size 16px
+      background #fff
+      border 1px solid #ccc
+      font-weight 400
     
 </style>

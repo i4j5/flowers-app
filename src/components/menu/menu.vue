@@ -7,7 +7,8 @@
       .menu__icon
       .menu__text Каталог
     router-link(to="/cart" tag="div" class="menu__item")
-      .menu__icon {{ quantity }}
+      .menu__icon
+        .menu__quantity(v-if="quantity > 0") {{ quantity }}
       .menu__text Корзина
     .menu__item
       .menu__icon
@@ -19,7 +20,11 @@
     name: 'menu',
     computed: {
       quantity () {
-        return this.$store.state.cart.length
+        let quantity = 0
+        this.$store.state.cart.forEach(el => {
+          quantity = quantity + el.quantity
+        })
+        return quantity
       }
     },
   }
@@ -36,11 +41,14 @@
       height 100%
       border none
       &_active
-        color #e05555
+        .menu__text
+          color #e05555
       &_exact-active
-        color #e05555 !important
+        .menu__text
+          color #e05555 !important
       &_page_main
-        color #000
+        .menu__text
+          color #000
     &__text
       text-align center
       font-size 12px
@@ -50,4 +58,16 @@
       height 30px
       background-color #ddd
       margin 8px auto 5px auto
+      position relative
+    .menu__quantity
+      font-size 10px
+      position absolute
+      background #ffb16d
+      height 16px
+      width 16px
+      line-height 16px
+      text-align center
+      border-radius 100%
+      top -4px
+      right -2px
 </style>
