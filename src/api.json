@@ -34,7 +34,7 @@
 				"images": [
 					{
 						"title": "String",
-						"src": "http://via.placeholder.com/1080x1080"
+						"src": "http://placeimg.com/1000/1000/nature"
 					},
 					{
 						"title": "String",
@@ -56,7 +56,7 @@
 				"images": [
 					{
 						"title": "String",
-						"src": "http://via.placeholder.com/1080x1080"
+						"src": "http://placeimg.com/1000/1000/animals"
 					},
 					{
 						"title": "String",
