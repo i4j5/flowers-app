@@ -1,19 +1,21 @@
 <template lang="pug">
   .cart
-    .cart__item(v-for="item in items", :key="item.id")
-      .cart__image
-        img(:src="item.images[0].src")
-      .cart__title {{ item.title }}
-      
-      .cart__price {{ item.price }} ₽
-      .cart__btn.cart__btn_decrement(v-on:click="remove(item.id)", v-bind:class="{ 'cart__btn_disabled': item.quantity == 1 }") - 
-      .cart__count {{ item.quantity }} 
-      .cart__btn.cart__btn_increment(v-on:click="add(item.id)") +
-      .cart__btn.cart__btn_delete(v-on:click="removeAll(item.id)") X
     div(v-if="priceTotal > 0")
-      hr
+      .cart__item(v-for="item in items", :key="item.id")
+        .grid
+          .grid__item.cart__image
+            img(:src="item.images[0].src")
+          .grid__item
+            .cart__title {{ item.title }}
+            .cart__price {{ item.price }} ₽
+            .cart__btn.cart__btn_decrement(v-on:click="remove(item.id)", v-bind:class="{ 'cart__btn_disabled': item.quantity == 1 }") - 
+            .cart__count {{ item.quantity }} 
+            .cart__btn.cart__btn_increment(v-on:click="add(item.id)") +
+
+            .cart__btn.cart__btn_delete(v-on:click="removeAll(item.id)") X
+      
       div Итого: {{ priceTotal }} ₽
-    .cart__btn.cart__btn_order Оформить заказ
+      .cart__btn.cart__btn_order Оформить заказ
 </template>
 
 <script>
@@ -72,17 +74,18 @@
 
 <style lang="stylus">
   .cart
+    & .grid__item
+      flex 0 0 calc(100% - 80px)
+      max-width calc(100% - 80px)
     &__item
-      white-space nowrap
-      display table
       width 100%
       background #fff
-      padding 5px 0px
+      padding 5px 10px
       *
         vertical-align top
     &__image
-      width 80px
-      display table-cell
+      width 80px !important
+      flex 0 0 80px !important
       padding-right 10px
       img 
         width 100%

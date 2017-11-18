@@ -1,16 +1,16 @@
 <template lang="pug">
-  .menu
-    router-link(to="/" tag="div" class="menu__item menu__item_page_main")
+  .menu.grid.grid_size_4
+    router-link(to="/" tag="div" class="grid__item menu__item menu__item_page_main")
       .menu__icon
       .menu__text Букет дня 
-    router-link(to="/categories" tag="div" class="menu__item")
+    router-link(to="/categories" tag="div" class="grid__item menu__item")
       .menu__icon
       .menu__text Каталог
-    router-link(to="/cart" tag="div" class="menu__item")
+    router-link(to="/cart" tag="div" class="grid__item menu__item")
       .menu__icon
         .menu__quantity(v-if="quantity > 0") {{ quantity }}
       .menu__text Корзина
-    .menu__item
+    .menu__item.grid__item
       .menu__icon
       .menu__text Меню
 </template>
@@ -35,8 +35,7 @@
     width 100%
     height 100%
     &__item
-      width 25%
-      float left
+      width 100%
       color #000
       height 100%
       border none

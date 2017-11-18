@@ -5,10 +5,10 @@
       .product__title {{ folder.title }}
       .product__price {{ folder.price }} ₽
       .product__delivery Доставка после 16
-      .product__row
-        .product__col.product__col.product__col_left
-          .product__btn.product__btn_tmpl_order(v-on:click="addCart") Заказать
-        .product__col.product__col.product__col_right
+      .grid.grid_size_2
+        .grid__item
+          .product__btn.product__btn_type_order(v-on:click="addCart") Заказать
+        .grid__item
           modal(:link="infoBtn") 
             span(v-html="folder.discription")
 </template>
@@ -21,7 +21,7 @@
     name: 'product',
     data: () => {
       return {
-        infoBtn: "<div class='product__btn product__btn_tmpl_info'>О букете</div>"
+        infoBtn: "<div class='product__btn product__btn_type_info'>О букете</div>"
       }
     },
     props:{
@@ -71,17 +71,6 @@
       display inline-block
     &__image
       max-width 100%
-    &__row
-      white-space nowrap
-      display table
-      width 100%
-    &__col
-      width 50%  
-      display table-cell
-      &_left
-        padding-right 4px
-      &_right
-        padding-left 4px
     &__btn
       border none
       text-align center
@@ -90,8 +79,10 @@
       border-radius 4px
       user-select none
       white-space nowrap
-      &_tmpl_info
+      width calc(100% - 5px)
+      &_type_info
         border 1px solid #aaa
-      &_tmpl_order
+        float right
+      &_type_order
         background #ddd
 </style>

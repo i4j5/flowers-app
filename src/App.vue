@@ -30,7 +30,7 @@
 </script>
 
 <style lang="stylus">
-  *
+  *, ::after, ::before 
     box-sizing border-box
     padding 0
     margin 0
@@ -97,4 +97,26 @@
     z-index 100
   .content
     padding-top 5px
+  
+  .grid
+    display flex
+    flex-flow row wrap
+    max-width 100%
+    &__item
+      position relative;
+      display inline-block
+      vertical-align top
+      margin 0
+    &_size_2
+      & .grid__item 
+        flex 0 0 calc(100%/2)
+        max-width calc(100%/2)
+    &_size_3
+      & .grid__item 
+        flex 0 0 calc(100%/3)
+        max-width calc(100%/3)
+    &_size_4
+      & .grid__item 
+        flex 0 0 calc(100%/4)
+        max-width calc(100%/4)
 </style>
