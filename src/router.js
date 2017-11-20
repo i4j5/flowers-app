@@ -6,6 +6,7 @@ Vue.use(Router)
 import notFound from '@/pages/not-found'
 import main from '@/pages/main'
 import cart from '@/pages/cart'
+import order from '@/pages/cart/order'
 import categories from '@/pages/categories'
 import category from '@/pages/categories/category'
 
@@ -41,6 +42,7 @@ export default new Router({
   routes: [
     { path: '/', component: main },
     { path: '/cart', component: cart },
+    { path: '/cart/order', component: order },
     { path: '/categories', component: categories },
     { path: '/categories/:id', component: category },
     { path: '*', component: notFound }

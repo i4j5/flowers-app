@@ -24,7 +24,7 @@
               .icon.icon_image_delete.icon_size_m.icon_color_main
       
       .cart__total Итого: {{ priceTotal }} ₽
-      .cart__btn.cart__btn_order Оформить заказ
+      router-link(to="/cart/order" tag="div" class="cart__btn cart__btn_order") Оформить заказ
 </template>
 
 <script>
