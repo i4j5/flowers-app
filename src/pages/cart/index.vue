@@ -122,7 +122,7 @@
       text-align center
       line-height 34px
       font-size 24px
-      background #e6e6e6
+      background #e3e3e3
       color #000
       border-radius 50px
       padding 8px
@@ -138,16 +138,14 @@
         background #FEDA1E
       &_decrement
         border-radius 0px
-        border-top-left-radius 50px
-        border-bottom-left-radius 50px
+        border-top-left-radius 2px
+        border-bottom-left-radius 2px
         width 40px
-        padding-left 10px
       &_increment
         border-radius 0px
-        border-top-right-radius 50px
-        border-bottom-right-radius 50px
+        border-top-right-radius 2px
+        border-bottom-right-radius 2px
         width 40px
-        padding-left 6px
       &_delete
         margin-left 5px
     &__count
@@ -158,7 +156,7 @@
       line-height 40px
       font-size 16px
       background #fff
-      border 1px solid #e6e6e6
+      border 1px solid #e3e3e3
       font-weight 400
     &__total
       text-align right 
