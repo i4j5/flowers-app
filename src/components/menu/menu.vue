@@ -2,16 +2,20 @@
   .menu.grid.grid_size_4
     router-link(to="/" tag="div" class="grid__item menu__item menu__item_page_main")
       .menu__icon
+        .icon.icon_image_home
       .menu__text Букет дня 
     router-link(to="/categories" tag="div" class="grid__item menu__item")
       .menu__icon
+        .icon.icon_image_grid
       .menu__text Каталог
     router-link(to="/cart" tag="div" class="grid__item menu__item")
       .menu__icon
+        .icon.icon_image_cart
         .menu__quantity(v-if="quantity > 0") {{ quantity }}
       .menu__text Корзина
-    .menu__item.grid__item
+    router-link(to="/menu" tag="div" class="grid__item menu__item")
       .menu__icon
+        .icon.icon_image_menu
       .menu__text Меню
 </template>
 
@@ -41,32 +45,44 @@
       border none
       &_active
         .menu__text
-          color #e05555
-      &_exact-active
-        .menu__text
-          color #e05555 !important
+          color #000
+         .menu__icon .icon
+          opacity 1
       &_page_main
         .menu__text
-          color #000
+          color #6f6f6f
+        .menu__icon .icon
+            opacity .5
+      &_exact-active
+        .menu__text
+          color #000 !important
+        .menu__icon .icon
+            opacity 1 !important
     &__text
       text-align center
       font-size 12px
       line-height 1em
+      color #6f6f6f
     &__icon
       width 30px
       height 30px
-      background-color #ddd
+      background-size 30px
       margin 8px auto 5px auto
       position relative
-    .menu__quantity
+      display block
+      & .icon
+        opacity .5
+        width 100%
+        height 100%
+    &__quantity
       font-size 10px
       position absolute
-      background #ffb16d
-      height 16px
-      width 16px
-      line-height 16px
+      background #feda1e
+      height 18px
+      width 18px
+      line-height 19px
       text-align center
       border-radius 100%
       top -4px
-      right -2px
+      right -4px
 </style>

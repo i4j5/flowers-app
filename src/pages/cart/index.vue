@@ -122,7 +122,7 @@
       text-align center
       line-height 34px
       font-size 24px
-      background #ccc
+      background #e6e6e6
       color #000
       border-radius 50px
       padding 8px
@@ -158,7 +158,7 @@
       line-height 40px
       font-size 16px
       background #fff
-      border 1px solid #ccc
+      border 1px solid #e6e6e6
       font-weight 400
     &__total
       text-align right 
