@@ -205,13 +205,21 @@
   
   .checkbox
     position relative
-    display block
-    padding-top 2px
-    font-size 13px
-    line-height 1.4
-    padding-left 30px
-    color #626262
-    i
+    &__control
+      position absolute
+      z-index -1
+      margin 0
+      opacity 0
+      &:checked+.checkbox__box
+        opacity 1
+    &__text
+      position relative
+      padding-top 2px
+      font-size 13px
+      line-height 1.4
+      color #626262
+      padding-left 30px
+    &__box
       opacity 0
       position absolute
       top 0
@@ -236,9 +244,9 @@
         transform rotate(-45deg)
         top 9px
         left 6px
-    &_checked
-      i
-        opacity 1
+    // &_checked
+    //   i
+    //     opacity 1
     &:before
       position absolute
       content ""
@@ -274,10 +282,10 @@
         padding-right 5px
     &__item 
       margin-bottom 15px
-      label
-        display block
-        clear both
-        margin-bottom 7px
-        font-size 13px
-        color #626262
+    &__label
+      display block
+      clear both
+      margin-bottom 7px
+      font-size 13px
+      color #626262
 </style>

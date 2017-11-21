@@ -2,52 +2,57 @@
   .order
     .form
       .form__item
-        label Ваше имя
+        lablel.form__label Ваше имя
         input.input
       .form__item
-        label  Телефон
+        lablel.form__label  Телефон
         input.input
       .form__item
-        label Email
+        lablel.form__label Email
         input.input
       .form__item
-        .checkbox Я получатель
+        label.checkbox
+          input(class="checkbox__control" type="checkbox")
+          span.checkbox__box
+          span.checkbox__text Я получатель
       .form__item
-        .checkbox.checkbox_checked 
-          i
-          |Не говорить, от кого букет
+        label.checkbox
+          input(class="checkbox__control" type="checkbox")
+          span.checkbox__box
+          span.checkbox__text Не говорить, от кого букет
       .form__item
-        .checkbox 
-          i
-          |Добавить открытку к букету (бесплатно)
+        label.checkbox
+          input(class="checkbox__control" type="checkbox")
+          span.checkbox__box
+          span.checkbox__text Добавить открытку к букету (бесплатно)
       .form__item
-        label Текс на открытке
+        lablel.form__label Текс на открытке
         textarea.textarea
       .form__item
-        label Имя получателя
+        lablel.form__label Имя получателя
         input.input
       .form__item
-        label  Телефон получателя
+        lablel.form__label  Телефон получателя
         input.input
       .form__item
-        label Адрес получателя
+        lablel.form__label Адрес получателя
         textarea.textarea
       .form__item
         .grid.grid_size_2
           .grid__item
-            label Дата доставки
+            lablel.form__label Дата доставки
             .select
               .select__text 10.12.2017
               .select__icon
                 .icon.icon_image_calendar.icon_size_m.icon_color_main
           .grid__item
             .select
-              label Интервал доставки
+              lablel.form__label Интервал доставки
               .select__text 10:00 - 12:00
               .select__icon
                 .icon.icon_image_clock.icon_size_m.icon_color_main
       .form__item
-        label Коментарий к заказу
+        lablel.form__label Коментарий к заказу
         textarea.textarea
 </template>
 
